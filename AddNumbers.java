@@ -1,12 +1,11 @@
-import java.util.Scanner;
-
 public class AddNumbers {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        int a = input.nextInt();
-        System.out.print("Enter second number: ");
-        int b = input.nextInt();
+        if (args.length < 2) {
+            System.out.println("Please provide two numbers as arguments.");
+            return;
+        }
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
         int sum = a + b;
         System.out.println("Sum: " + sum);
     }
